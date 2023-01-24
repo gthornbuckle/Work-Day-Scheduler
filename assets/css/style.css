@@ -24,7 +24,7 @@ img{
   background-color: transparent;
   color: white;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid white;
 }
 
 .description {
@@ -49,7 +49,9 @@ img{
   background-size: cover;
   color: white;
   margin-bottom: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hour {
@@ -61,7 +63,7 @@ img{
 .past {
   background-color: #d3d3d3;
   border: 2px solid #505d85;
-  color: rgb(10, 10, 10);
+  color: black;
 }
 
 .present {
@@ -82,11 +84,18 @@ img{
   background-color: #253670;
   color: white;
   content:url(../images/save-icon.png);
+  transition: all 0.5s ease-in-out;
 }
 
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+.saveBtn:focus {
+  outline: none;
+  background-color: #5f80eb;
+  transition: all 0.5s ease-in-out;
 }
 
 #timeBlocks{
