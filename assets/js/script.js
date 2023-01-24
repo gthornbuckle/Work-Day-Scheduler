@@ -56,5 +56,11 @@ displaySavedEvents = function(){
     console.log(userEvents[i][0]);
 }
 
+if (userEvents === undefined || userEvents.length == 0){ //Checks if user data exists in local storage
+    console.log("No user data found.");
+}
+else{
+    displaySavedEvents();
+}
+
 displayHours();
-displaySavedEvents();
