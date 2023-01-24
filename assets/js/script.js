@@ -3,12 +3,11 @@ $("#currentDay").text(currentDate);
 
 var currentTime = moment().format("HH"); //Gets the current time
 
-var userEvents = JSON.parse(localStorage.getItem("userEvents"));
-
+var userEvents = JSON.parse(localStorage.getItem("userEvents")) || []; //Takes user events from local storage
+var userInputs = document.getElementsByTagName("input"); //Takes all input fields from page
 
 displayHours = function(){ //Function to display working day hours
     var setHours = document.getElementsByTagName("h2"); //Takes all elements with specified tag from page
-    var userInputs = document.getElementsByTagName("input");
     var currentHour = 9;
     var tempHour = 0;
     var setInput= 0;
@@ -39,18 +38,23 @@ $("button").click(function(){ //Gets the id of the save button that the user cli
 });
 
 saveEvent = function (){
-    var userInputs = document.getElementsByTagName("input");
     var setInput= clickedBtn; 
     var tempInput = $(userInputs[setInput]).val(); //Takes the user input from the row corresponding to the button they click
 
     console.log("The user entered: '" +tempInput +"' on row: " +clickedBtn);
 
-    var userEvents = [];
+    userEvents = JSON.parse(localStorage.getItem('userEvents')) || []; //Loads user events array from local storage or creates empty array if it doesn't exist
     var tempUserInput = [tempInput, setInput];
 
-    userEvents = JSON.parse(localStorage.getItem('userEvents')) || []; //Loads user events array from local storage or creates empty array if it doesn't exist
     userEvents.push(tempUserInput); //Adds user inputted event to array
     localStorage.setItem("userEvents", JSON.stringify(userEvents)); //Saves array to local storage
 }
 
+displaySavedEvents = function(){
+    var i = 0;
+    $(userInputs[userEvents[i][1]]).val(userEvents[i][0]);
+    console.log(userEvents[i][0]);
+}
+
 displayHours();
+displaySavedEvents();
