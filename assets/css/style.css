@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: #505d85;
 }
 
 textarea {
@@ -13,10 +14,15 @@ textarea {
   padding: 10px;
 }
 
+img{
+  max-width: 40px;
+  max-height: 40px;
+}
+
 .jumbotron {
   text-align: center;
   background-color: transparent;
-  color: black;
+  color: white;
   border-radius: 0;
   border-bottom: 10px solid black;
 }
@@ -36,33 +42,46 @@ textarea {
   border-top: 1px solid white;
 }
 
+.hourHeading{
+  border: 2px solid #505d85;
+  border-top-left-radius: 15px;
+  background-color: #253670;
+  background-size: cover;
+  color: white;
+  margin-bottom: 0;
+  text-align: center;
+}
+
 .hour {
   background-color: #ffffff;
-  color: #000000;
+  color: #040414;
   border-top: 1px dashed #000000;
 }
 
 .past {
   background-color: #d3d3d3;
-  color: white;
+  border: 2px solid #505d85;
+  color: rgb(10, 10, 10);
 }
 
 .present {
   background-color: #ff6961;
+  border: 2px solid #505d85;
   color: white;
 }
 
 .future {
   background-color: #77dd77;
+  border: 2px solid #505d85;
   color: white;
 }
 
 .saveBtn {
-  border-left: 1px solid black;
+  border: 2px solid #505d85;
   border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+  background-color: #253670;
   color: white;
+  content:url(../images/save-icon.png);
 }
 
 .saveBtn i:hover {
@@ -73,6 +92,7 @@ textarea {
 #timeBlocks{
   margin:10px;
   display: grid;
+  grid-template-rows: 20% 20% 20% 20% 20% 20% 20% 20% 20%;
   grid-template-columns: 0.2fr 1fr 0.2fr;
   grid-template-areas: 
     "time0 userInput0 saveButton0"
