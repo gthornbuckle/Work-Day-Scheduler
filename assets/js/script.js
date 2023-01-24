@@ -51,9 +51,10 @@ saveEvent = function (){
 }
 
 displaySavedEvents = function(){
-    var i = 0;
-    $(userInputs[userEvents[i][1]]).val(userEvents[i][0]);
-    console.log(userEvents[i][0]);
+    for (var i = 0; i < userEvents.length; i++){ //Checks local storage for saved events
+        $(userInputs[userEvents[i][1]]).val(userEvents[i][0]); //Populates input fields with saved events
+    }
+ 
 }
 
 if (userEvents === undefined || userEvents.length == 0){ //Checks if user data exists in local storage
