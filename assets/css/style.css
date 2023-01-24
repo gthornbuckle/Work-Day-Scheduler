@@ -69,3 +69,20 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+#timeBlocks{
+  margin:10px;
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+  grid-template-areas: 
+    "time0 userInput0 saveButton0"
+    "time1 userInput1 saveButton1"
+    "time2 userInput2 saveButton2"
+    "time3 userInput3 saveButton3"
+    "time4 userInput4 saveButton4"
+    "time5 userInput5 saveButton5"
+    "time6 userInput6 saveButton6"
+    "time7 userInput7 saveButton7"
+    "time8 userInput8 saveButton8"
+    ;
+}
