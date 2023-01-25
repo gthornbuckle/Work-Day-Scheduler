@@ -17,7 +17,7 @@ Press corresponding save button to save the text to local storage.
 
 ## Deployed Page
 
-![deployed page](./assets/Images/deployedpage.PNG)
+![deployed page](./assets/images/deployedpage.PNG)
 
 [Deployed Page](https://gthornbuckle.github.io/Work-Day-Scheduler/)
 
